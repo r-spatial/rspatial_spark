@@ -11,7 +11,7 @@ The document is organised accroding to the minimum main steps involved in spatia
 
 To visualise the general idea of spatial workflow I have simplified the 'tidyverse' workflow model and added main packages involved in the individual steps.
 
-![](minimum_workflow.svg)
+![](https://github.com/tim-salabim/rspatial/blob/master/minimum_workflow.svg)
 
 Please note that this is far from complete so feel free to manipulate and adjust this svg file as you see fit...
 
