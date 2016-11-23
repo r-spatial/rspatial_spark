@@ -5,13 +5,13 @@ November 23, 2016
 
 
 ## Introduction
-Without too much babbling, this document is meant as a brainstorming place for collecting ideas and requirements for advancing spatial analysis workflow in R. The ultimate aim is, in my opinion, to enable a complete workflow for the day-to-day stuff from disk storage (I/O) to interactive data manipulation without the need to open external software. Hopefully there will be a pathway emerging from this collection and we can advance R's capabilities for spatial data analysis.
+Without too much babbling, this document is meant as a brainstorming place for collecting ideas and requirements for advancing spatial analysis workflow in R. The ultimate aim is, in my opinion, to enable a complete workflow for the day-to-day stuff from disk storage (I/O) via (interactive) data manipulation to final presentation without the need to open external software. Hopefully there will be a pathway emerging from this collection and we can advance R's capabilities for spatial data analysis.
 
 The document is organised accroding to the minimum main steps involved in spatial workflow. Please contribute by expanding this document in any way you see fit but try to be as concise and clear as possible. **If you have extended input to any of the major points, please provide a stand-alone document (rmd & html) and include a link to it in the main document at the relevant position.** Questions regrding unclear points should probably be made as an iussue referencing the main document.
 
 To visualise the general idea of spatial workflow I have simplified the 'tidyverse' workflow model and added main packages involved in the individual steps.
 
-![](https://github.com/tim-salabim/rspatial/blob/master/minimum_workflow.svg)
+![](./images/minimum_workflow.svg)
 
 Please note that this is far from complete so feel free to manipulate and adjust this svg file as you see fit...
 
