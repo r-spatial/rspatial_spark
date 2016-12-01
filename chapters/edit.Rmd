@@ -1,0 +1,54 @@
+---
+title: "Edit"
+author: "Tim Appelhans"
+date: "December 1, 2016"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Editing existing features
+Interactive feature manipulation is an integral part of any GIS system and provides easy and quick access to modify individual features. In many cases it makes sense to modify features programmatically for which R already provides a wealth of functionality. Here, we want to discuss interactive editing in a bit more detail. 
+
+Bhaskar Karambelkar(@bhaskarvk) has put together a collection of addins for the [leaflet package](https://github.com/rstudio/leaflet) authored and maintained by Joe Cheng (@jcheng5) and the team at RStudio in his **leaflet.extras** package. Among other plugins this provides `addDrawToolbar`, a function to leverage bindings to the JS `leaflet.draw` plugin which enables drawing and editing features on a **leaflet** map. While, as far as I understand, this comes with **shiny** support, there is now standard setup for 'saving' modifications into the current R environment to be used further. Basically, to achive this, we would need to write a shiny app that allows us to save changes in R. 
+
+This is where the [R Consortium](https://www.r-consortium.org/) comes into play. It has granted us with funding to develop a standard two-way communication infrastructure between R and JS. The application can be found [here](https://github.com/environmentalinformatics-marburg/mapview_toolchain/blob/master/mapview_interactive_data_manipulation.Rmd). Efforts to implement this will highly benefit from some real-world use-cases of interactive spatial data manipulation and this is where we would like to collect these. 
+
+**So, help us by adding more examples to the list below.**
+
+### Use-cases for interactive spatial data manipulation
+
+#### 1. Location editing
+Sometimes features (points/vertices) are placed incorrectly (maybe as a result of poor digitisation or incorrect crs transformation or ...) so that it is useful to be able to simply drag them from their current location to another and save the result. In the following example, clicking on 'Edit Layers' will allow you to drag any of the points to weherever you want. Clicking 'Save' will fix the point at the new location. However, this is only happening on the map, not in your actual object in the R environment. Thus, having a second 'Save' option to update the feature object on the R side is what we are trying to achieve.
+
+```{r edit1}
+# devtools::install_github("environmentalinformatics-marburg/mapview")
+# devtools::install_github("leaflet.extras")
+
+library(mapview)
+library(leaflet.extras)
+
+m <- mapview(breweries91)
+
+m@map %>% 
+  addDrawToolbar(targetGroup = 'breweries91',
+                 editOptions = editToolbarOptions(
+                   selectedPathOptions = selectedPathOptions())) 
+```
+
+<hr>
+
+#### 2. Editing attribute tables
+In this scenario we want to be able to edit the feature attributes displayed in the popups. Sometimes this obviously makes more sense to be done programmatically (e.g. modifying a number of features that satisfy a certain criteria), yet, sometimes a quick manipulation is preferable to quickly correct a typo for example. Basically, we want to be able to achieve a result interactively which is identical to the following:
+
+```{r edit2}
+library(mapview)
+breweries91[1, "brewery"] <- "SomeNewName"
+```
+
+<hr>
+

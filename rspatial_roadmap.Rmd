@@ -44,5 +44,10 @@ A comprehensive overview of mapview functionality can be found [here](http://env
 
 
 ## Edit
+Interactive feature manipulation is an integral part of any GIS system and provides easy and quick access to modify individual features. In many cases it makes sense to modify features programmatically for which R already provides a wealth of functionality. 
+
+For a more detailed discussion on this please refer to
+
+[chapters/edit.html](chapters/edit.html)
 
 ## Communicate
