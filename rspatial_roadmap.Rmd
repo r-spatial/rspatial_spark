@@ -30,7 +30,7 @@ Please note that this is far from complete so feel free to manipulate and adjust
 ## Visualise
 In this context visualise refers to quick visual inspection of data during workflow. For final presentation grade visualisations refer to section *Communicate*
 
-This is what e.g. packages **mapview** and **quickmapr** are written for (the latter can now be used within mapview by setting `mapviewOptions(platform = "qmapr")`. Package **tmap** has function `qtm()` for quick plotting/viewing.
+This is what e.g. packages **mapview** and **quickmapr** are written for (the latter can now be used within mapview by setting `mapviewOptions(platform = "quickmapr")`. Package **tmap** has function `qtm()` for quick plotting/viewing.
 
 ### mapview
 **mapview** currently does two things, it
@@ -41,13 +41,15 @@ the intention of this is to enable the user to track manipulations that have nec
 
 A comprehensive overview of mapview functionality can be found [here](http://environmentalinformatics-marburg.github.io/mapview/introduction.html)
 
+More thoughts on where we want to take mapview are outlined in
 
+[chapters/visualise/mapview.html](chapters/visualise/mapview.html)
 
 ## Edit
 Interactive feature manipulation is an integral part of any GIS system and provides easy and quick access to modify individual features. In many cases it makes sense to modify features programmatically for which R already provides a wealth of functionality. 
 
 For a more detailed discussion on this please refer to
 
-[chapters/edit.html](chapters/edit.html)
+[chapters/edit/edit.html](chapters/edit/edit.html)
 
 ## Communicate
