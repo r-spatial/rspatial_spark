@@ -26,6 +26,13 @@ Please note that this is far from complete so feel free to manipulate and adjust
 
 ## Manipulate
 
+### Projections
+ * [dggridR](https://cran.r-project.org/web/packages/dggridR/index.html). **Inputs:** lat/lon pairs and a package-specific discrete grid definition. **Outputs:** Discrete grid cell numbers, data frames suitable for plotting cells as polygons in ggplot2.
+ 
+### Terrain Analysis
+ * rgrass7
+ * spgrass6
+ * rqgis
 
 ## Visualise
 In this context visualise refers to quick visual inspection of data during workflow. For final presentation grade visualisations refer to section *Communicate*
