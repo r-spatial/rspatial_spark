@@ -35,7 +35,7 @@ Regarding the key functionalities that standard GIS visualisation platforms prov
 
 1. layered views (with possibility to switch layers on and off)
 2. zoom-to-layer-buttons for each layer
-3. pupop queries (not usually available in GIS systems)
+3. popup queries (not usually available in GIS systems)
 4. a scale bar
 5. mouse position information about coordinates and zoom level
 6. a choice of different basemaps on which to render features
@@ -51,7 +51,7 @@ mapview(poppendorf[[5]], alpha = 1) + mapview(breweries91, alpha = 0.2, alpha.re
 
 <br>
 
-In case you work with many layers this quickly becomes ridiculously involved. On top of this legends are suppoerted by leaflet but they are added to the view by brute force so that for many layers there is simply not enough physical space on the map canvas to display them. 
+In case you work with many layers this quickly becomes ridiculously involved. On top of this legends are supported by leaflet but they are added to the view by brute force so that for many layers there is simply not enough physical space on the map canvas to display them. 
 
 This calls for a different approach to control layers interactively. The solution I am proposing here is again trying to mimic standard GIS solutions where a portion of the view is dedicated to controlling everything you see on the map. This is usually achieved by dividing the map canvas window into a display and a control part where every control option is located. From there you can switch layers on and off, change their appearance and order, define colors and opacity and get meta information for each layer. It is very desirable to have something similar for mapview/leaflet! Here's an amateur graphical depcition of what this could look like for leaflet/mapview:
 
