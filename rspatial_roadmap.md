@@ -6,7 +6,7 @@ November 23, 2016
 
 ## Introduction
 
-The document is organised accroding to the minimum main steps involved in spatial workflow. Please contribute by expanding this document in any way you see fit but try to be as concise and clear as possible. **If you have extended input to any of the major points, please provide a stand-alone document (rmd & html) and include a link to it in the main document at the relevant position.** Questions regrding unclear points should probably be made as an iussue referencing the main document.
+The document is organised according to the minimum main steps involved in spatial workflow. Please contribute by expanding this document in any way you see fit but try to be as concise and clear as possible. **If you have extended input to any of the major points, please provide a stand-alone document (rmd & html) and include a link to it in the main document at the relevant position.** Questions regrding unclear points should probably be made as an iussue referencing the main document.
 
 To visualise the general idea of spatial workflow I have simplified the 'tidyverse' workflow model and added main packages involved in the individual steps.
 
@@ -19,6 +19,13 @@ Please note that this is far from complete so feel free to manipulate and adjust
 
 ## Manipulate
 
+### Projections
+ * [dggridR](https://cran.r-project.org/web/packages/dggridR/index.html). **Inputs:** lat/lon pairs and a package-specific discrete grid definition. **Outputs:** Discrete grid cell numbers, data frames suitable for plotting cells as polygons in ggplot2.
+ 
+### Terrain Analysis
+ * rgrass7
+ * spgrass6
+ * rqgis
 
 ## Visualise
 In this context visualise refers to quick visual inspection of data during workflow. For final presentation grade visualisations refer to section *Communicate*
@@ -29,7 +36,7 @@ This is what e.g. packages **mapview** and **quickmapr** are written for (the la
 **mapview** currently does two things, it
 
 1. visualises the data using leaflet and stores the leaflet map in slot `@map` and 
-2. sotres the modifed object(s) that are visualied in a list in slot `@object` - 
+2. stores the modifed object(s) that are visualised in a list in slot `@object` - 
 the intention of this is to enable the user to track manipulations that have necessarily been carried out on the object(s) to correctly visualise it (e.g. re-projection).
 
 A comprehensive overview of mapview functionality can be found [here](http://environmentalinformatics-marburg.github.io/mapview/introduction.html)
