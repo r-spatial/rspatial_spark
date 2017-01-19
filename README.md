@@ -1,4 +1,4 @@
-This repo was originally hosted at github.com/tim-salabim but moved here as this is somewhat the birthplace of github.com/r-spatial see https://github.com/r-spatial/rspatial_spark/issues/9 for the entire discussion.
+This repo was originally hosted at https://github.com/tim-salabim but moved here as this is somewhat the birthplace of https://github.com/r-spatial see https://github.com/r-spatial/rspatial_spark/issues/9 for the entire discussion.
 
 ### What is this about?
 
